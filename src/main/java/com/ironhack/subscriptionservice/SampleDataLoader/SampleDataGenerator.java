@@ -31,17 +31,22 @@ public class SampleDataGenerator implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
+        LocalDate startDate;
+
+//        List<SubscriptionPack> sampleSubscriptionPacks = IntStream.rangeClosed(1, 50)
+//                .mapToObj(i -> new SubscriptionPack(
+//                        faker.number().numberBetween(21, 100),
+//                        startDate = getRandomLocalDate(),
+//                        convertedStartDate.plusMonths(1)
+//                )).collect(Collectors.toList());
+//
+//        subscriptionPackRepository.saveAll(sampleSubscriptionPacks);
+
+    }
+
+    private LocalDate getRandomLocalDate() {
         Date startDate = faker.date().between(Date.from(Instant.parse("2021-01-01")), Date.from(Instant.parse("2021-08-31")));
         LocalDate convertedStartDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
-        List<SubscriptionPack> sampleSubscriptionPacks = IntStream.rangeClosed(1, 50)
-                .mapToObj(i -> new SubscriptionPack(
-                        faker.number().numberBetween(21, 100),
-                        convertedStartDate,
-                        convertedStartDate.plusMonths(1)
-                )).collect(Collectors.toList());
-
-        subscriptionPackRepository.saveAll(sampleSubscriptionPacks);
-
+        return convertedStartDate;
     }
 }

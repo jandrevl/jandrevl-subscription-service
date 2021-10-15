@@ -15,5 +15,5 @@ public interface UserServiceProxy {
 
     @GetMapping("/customers/{id}")
     @ResponseStatus(HttpStatus.OK)
-    UserDTO GetCustomerById(@PathVariable(name = "id") Long id);
+    UserDTO getCustomerById(@PathVariable(name = "id") Long id);
 }

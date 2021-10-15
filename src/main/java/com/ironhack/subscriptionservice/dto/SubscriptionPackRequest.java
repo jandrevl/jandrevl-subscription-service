@@ -19,8 +19,8 @@ public class SubscriptionPackRequest {
 
 
     private Long userId;
-    private LocalDate subscriptionPackStart;
-    private LocalDate subscriptionPackEnd;
+    private String subscriptionPackStart;
+    private String subscriptionPackEnd;
     private String paymentsId;
 
 }

@@ -19,14 +19,17 @@ import java.time.LocalDate;
 public class SubscriptionPack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private long userId;
+    private Long id;
+    private Long userId;
     private LocalDate subscriptionPackStart;
     private LocalDate subscriptionPackEnd;
 
-    public SubscriptionPack(long userId, LocalDate subscriptionPackStart, LocalDate subscriptionPackEnd) {
+
+    public SubscriptionPack(Long userId, LocalDate subscriptionPackStart,
+                            LocalDate subscriptionPackEnd) {
         this.userId = userId;
         this.subscriptionPackStart = subscriptionPackStart;
         this.subscriptionPackEnd = subscriptionPackEnd;
+
     }
 }

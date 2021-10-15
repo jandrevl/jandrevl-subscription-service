@@ -1,11 +1,11 @@
 package com.ironhack.subscriptionservice.dto;
 
-import ch.qos.logback.core.status.Status;
+import com.ironhack.subscriptionservice.enums.Status;
+import com.ironhack.subscriptionservice.enums.UserType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.usertype.UserType;
 
 import java.time.LocalDate;
 
