@@ -46,6 +46,16 @@ public class SubscriptionPackService {
 
 
     }
+    
+    
+    public SubscriptionPack create(SubscriptionPackRequest request) {
+       
+        SubscriptionPack newSubscription = new SubscriptionPack();
+        
+        Long userId = request.getUserId();
+        
+        
+    }
 
 
 }
