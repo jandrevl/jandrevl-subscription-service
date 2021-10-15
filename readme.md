@@ -4,7 +4,7 @@ PORT: 8600
 
 spring.application.name=user-service
 
-###GET: /api/subscriptions/{userId}
+### GET: /api/subscriptions/{userId}
 
 return: (if the user doesn't have an active subscription today, returns a null body)
 
