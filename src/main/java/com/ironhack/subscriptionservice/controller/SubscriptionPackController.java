@@ -22,12 +22,14 @@ public class SubscriptionPackController {
 
     }
 
-    @PostMapping("/subscription/")
+    @PostMapping("/subscription")
     @ResponseStatus(HttpStatus.CREATED)
-    public SubscriptionPack createSubscription(@RequestBody )
-
-
-
+    public SubscriptionPack createSubscription(@RequestBody SubscriptionPackRequest request) {
+        
+        return subscriptionPackService.create(request);
+        
+        
+    }
 
 
 }
